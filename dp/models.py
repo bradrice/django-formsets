@@ -1,5 +1,4 @@
 from django.db import models
-from django.forms import ModelForm
 from django.forms.models import inlineformset_factory
 
 # Create your models here.

@@ -20,4 +20,4 @@ class BookForm(ModelForm):
 
     name = forms.CharField(widget=forms.TextInput(attrs={'class':'u-full-width'}))
 
-BookFormset = inlineformset_factory(Author, Book, extra=5, max_num=12)
+BookFormset = inlineformset_factory(Author, Book, extra=3, max_num=3, widgets={'name': forms.TextInput(attrs={'class':'u-full-width'})})

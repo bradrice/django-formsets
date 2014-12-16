@@ -3,7 +3,18 @@
 <form method="post" action="">
 {% csrf_token %}
 {{ formset.management_form }}
-	{{ formset.as_p }}
-    <input type="submit" value="Enter">
+	{% for form in formset %}
+	<div class="row">
+		<div class="twelve columns">
+        {{ form }}
+    </div>
+	</div>
+	
+    {% endfor %}
+    <div class="row">
+    	<div class="twelve columns">
+    		<input type="submit" value="Enter">
+    	</div>
+    </div>
 </form>
 {% endblock %}
